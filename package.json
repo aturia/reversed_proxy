@@ -1,0 +1,24 @@
+{
+  "name": "reversed_proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+  "dev": "nodemon --exec ts-node src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js",
+  "start@api_2": "PORT=3001 node dist/server.js",
+  "start@api_1": "PORT=3002 node dist/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.1",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
