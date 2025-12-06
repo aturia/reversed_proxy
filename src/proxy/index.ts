@@ -5,10 +5,10 @@ import { LoadBalancer } from '../lib/loadBalancer';
 
 const loadBalancer = new LoadBalancer(userServiceServers)
 
-export const customReversedProxy = (req: Request, res: Response) => { 
+export const customReversedProxy = (req: Request, res: Response) => {
     console.log(`[CustomProxy] ${req.method} ${req.baseUrl}`);
-    
-    const headers = {...req.headers}
+
+    const headers = { ...req.headers }
     headers.host = req.hostname;
     headers['x-forwarded-for'] = req.ip;
 
