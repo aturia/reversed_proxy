@@ -19,3 +19,6 @@ yarn-error.log*
 .env.local
 .env.development
 .env.production
+
+# Logs
+logs/

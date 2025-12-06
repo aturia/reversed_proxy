@@ -4,15 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-  "dev": "nodemon --exec ts-node src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js",
-  "start@api_2": "PORT=3001 node dist/server.js",
-  "start@api_1": "PORT=3002 node dist/server.js"
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "start@api_2": "PORT=3001 node dist/server.js",
+    "start@api_1": "PORT=3002 node dist/server.js"
   },
   "dependencies": {
     "express": "^5.2.1",
-    "http-proxy-middleware": "^3.0.5"
+    "http-proxy-middleware": "^3.0.5",
+    "uuid": "^13.0.0",
+    "winston": "^3.18.3",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
